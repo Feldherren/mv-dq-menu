@@ -25,6 +25,7 @@
 	    this._statusWindow.y = 400+this._goldWindow.height;
 	};
 
+	// Window_MenuStatus
 	var alias_Window_MenuStatus_prototype_windowWidth = Window_MenuStatus.prototype.windowWidth;
 	Window_MenuStatus.prototype.windowWidth = function() {
 	    return Graphics.boxWidth - 240;
@@ -45,4 +46,39 @@
 	    return 4;
 	};
 
+	// Window_MenuCommand
+	// var alias_Window_MenuCommand_prototype_windowWidth = Window_MenuCommand.prototype.windowWidth;
+	// Window_MenuCommand.prototype.windowWidth = function() {
+	//     return 480;
+	// };
+
+	var alias_Window_MenuCommand_prototype_numVisibleRows = Window_MenuCommand.prototype.numVisibleRows;
+	Window_MenuCommand.prototype.numVisibleRows = function() {
+	    return this.maxItems()/2;
+	};
+
+	var alias_Window_MenuCommand_prototype_numVisibleCols = Window_MenuCommand.prototype.numVisibleCols;
+	Window_MenuCommand.prototype.numVisibleCols = function() {
+	    return 2;
+	};
+
+	var alias_Window_MenuCommand_prototype_windowWidth = Window_MenuCommand.prototype.windowWidth;
+	Window_MenuCommand.prototype.windowWidth = function() {
+	    return 240;
+	};
+
+	var alias_Window_MenuCommand_prototype_windowHeight = Window_MenuCommand.prototype.windowHeight;
+	Window_MenuCommand.prototype.windowHeight = function() {
+	    return this.fittingHeight(this.numVisibleRows());
+	};
+
+	var alias_Window_MenuCommand_prototype_maxRows = Window_MenuCommand.prototype.maxRows;
+	Window_MenuCommand.prototype.maxRows = function() {
+	    return this.maxItems()/2;
+	};
+
+	var alias_Window_MenuCommand_prototype_maxCols = Window_MenuCommand.prototype.maxCols;
+	Window_MenuCommand.prototype.maxCols = function() {
+	    return 2;
+	};
 })();
