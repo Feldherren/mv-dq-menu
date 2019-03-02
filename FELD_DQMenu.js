@@ -6,7 +6,12 @@
  * @plugindesc Alternative menu designed to act like Dragon Quest's menu.
  * @author Feldherren
  *
- * @help This plugin does not provide plugin commands.
+ * @help DQ Menu v1.0, by Feldherren (rpaliwoda AT googlemail.com)
+ *
+ * A Dragon Quest style menu for RPG Maker MV.
+ *
+ * Free for use with commercial projects, though I'd appreciate being contacted 
+ * if you do use it in any games, just to know.
  *
  * @param No. status window actors
  * @desc How many actors the status window will display without scrolling
@@ -28,7 +33,7 @@
  * @desc Whether or not MP gauge displayed in the menu status window (true/false)
  * @default false
  */
- 
+
 (function() {
 
     function toNumber(str, def) {
@@ -92,7 +97,6 @@
 	    var actor = $gameParty.members()[index];
 	    var rect = this.itemRect(index);
 	    var x = rect.x;
-	    //var y = rect.y + rect.height / 2 - this.lineHeight() * 1.5;
 	    var y = rect.y;
 	    var width = rect.width;
 	    var lineHeight = this.lineHeight();
