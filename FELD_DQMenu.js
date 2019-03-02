@@ -28,9 +28,7 @@
  * @desc Whether or not MP gauge displayed in the menu status window (true/false)
  * @default false
  */
-
-// TODO: 
-// Plugin option to show gauges for HP and MP, too
+ 
 (function() {
 
     function toNumber(str, def) {
