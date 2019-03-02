@@ -141,22 +141,18 @@
 	};
 
 	// Window_MenuCommand
-	var alias_Window_MenuCommand_prototype_maxRows = Window_MenuCommand.prototype.maxRows;
 	Window_MenuCommand.prototype.maxRows = function() {
 	    return this.maxItems()/2;
 	};
 
-	var alias_Window_MenuCommand_prototype_maxCols = Window_MenuCommand.prototype.maxCols;
 	Window_MenuCommand.prototype.maxCols = function() {
 	    return 2;
 	};
 
-	var alias_Window_MenuCommand_prototype_numVisibleRows = Window_MenuCommand.prototype.numVisibleRows;
 	Window_MenuCommand.prototype.numVisibleRows = function() {
 	    return this.maxRows();
 	};
 
-	var alias_Window_MenuCommand_prototype_numVisibleCols = Window_MenuCommand.prototype.numVisibleCols;
 	Window_MenuCommand.prototype.numVisibleCols = function() {
 	    return this.maxCols();
 	};
